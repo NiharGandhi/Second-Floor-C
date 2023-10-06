@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Classroom Directions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #000000;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #DC143C;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .title-floor {
+            font-size: 18px;
+            font-weight: 600;
+            background-color: lavender;
+            border-radius: 5px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #000000;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+
+        .direction {
+            display: none;
+            margin-top: 10px;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .classroom-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+
+            /* For screens with a minimum width of 640px */
+            .classroom-image {
+                max-width: 50%;
+                height: 50%;
+            }
+        }
+    </style>
+    <script>
+        function showDirection() {
+            var select = document.getElementById("classroom-select");
+            var selectedClassroom = select.options[select.selectedIndex].value;
+            var directions = document.getElementsByClassName("direction");
+
+            for (var i = 0; i < directions.length; i++) {
+                directions[i].style.display = "none";
+            }
+
+            if (selectedClassroom !== "") {
+                var direction = document.getElementById(selectedClassroom);
+                direction.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title-floor">Second Floor</div>
+            <div class="title">Classroom Directions</div>
+            <select id="classroom-select" class="select" onchange="showDirection()">
+                <option value="">Select a classroom</option>
+                <option value="9A">9A</option>
+                <option value="9B">9B</option>
+                <option value="9C">9C</option>
+                <option value="9D">9D</option>
+                <option value="9E">9E</option>
+                <option value="9F">9F</option>
+                <option value="9G">9G</option>
+                <option value="9H">9H</option>
+                <option value="9I">9I</option>
+                <option value="10A">10A</option>
+                <option value="10B">10B</option>
+                <option value="10C">10C</option>
+                <option value="10D">10D</option>
+                <option value="10E">10E</option>
+                <option value="10F">10F</option>
+                <option value="10G">10G</option>
+                <option value="10H">10H</option>
+                <option value="10I">10I</option>
+                <option value="11A">11A</option>
+                <option value="11B">11B</option>
+                <option value="11C">11C</option>
+                <option value="11D">11D</option>
+                <option value="11E">11E</option>
+                <option value="11F">11F</option>
+                <option value="11G">11G</option>
+                <option value="11H">11H</option>
+                <option value="11I">11I</option>
+                <option value="12A">12A</option>
+                <option value="12B">12B</option>
+                <option value="12C">12C</option>
+                <option value="12D">12D</option>
+                <option value="12D">12D</option>
+                <option value="12M">12M</option>
+                <option value="12N">12N</option>
+                <option value="12O">12O</option>
+                <option value="12P">12P</option>
+            </select>
+            <div id="directions-container">
+                <div id="9A" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9A.png" alt="Class 9A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9B" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9B.png" alt="Class 9B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9C" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9C.png" alt="Class 9C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9D" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9D.png" alt="Class 9D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9E" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9E.png" alt="Class 9E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9F" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9F.png" alt="Class 9F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9G" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9G.png" alt="Class 9G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9H" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9H.png" alt="Class 9H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9I" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9I.png" alt="Class 9I" class="classroom-image">
+                    </div>
+                </div>
+                <div id="9J" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="9J.png" alt="Class 9J" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10A" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10A.png" alt="Class 10A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10B" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10B.png" alt="Class 10B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10C" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10C.png" alt="Class 10C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10D" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10D.png" alt="Class 10D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10E" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10E.png" alt="Class 10E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10F" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10F.png" alt="Class 10F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10G" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10G.png" alt="Class 10G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10H" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10H.png" alt="Class 10H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="10I" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="10I.png" alt="Class 10I" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11A" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11A.png" alt="Class 11A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11B" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11B.png" alt="Class 11B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11C" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11C.png" alt="Class 11C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11D" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11D.png" alt="Class 11D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11E" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11E.png" alt="Class 11E" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11F" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11F.png" alt="Class 11F" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11G" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11G.png" alt="Class 11G" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11H" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11H.png" alt="Class 11H" class="classroom-image">
+                    </div>
+                </div>
+                <div id="11I" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="11I.png" alt="Class 11I" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12A" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12A.png" alt="Class 12A" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12B" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12B.png" alt="Class 12B" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12C" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12C.png" alt="Class 12C" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12D" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12D.png" alt="Class 12D" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12M" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12M.png" alt="Class 12M" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12N" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12N.png" alt="Class 12N" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12O" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12O.png" alt="Class 12O" class="classroom-image">
+                    </div>
+                </div>
+                <div id="12P" class="direction">
+                    <div>(Second Floor)</div>
+                    <div>
+                        <img src="12P.png" alt="Class 12P" class="classroom-image">
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
